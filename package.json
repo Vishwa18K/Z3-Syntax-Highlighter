@@ -1,0 +1,29 @@
+{
+  "name": "zcubes-syntax",
+  "displayName": "ZCubes Syntax Highlighting",
+  "description": "Syntax highlighting for the ZCubes language",
+  "version": "0.0.1",
+  "publisher": "Vishwa Krishnan",
+  "engines": {
+    "vscode": "^1.100.3"
+  },
+  "license": "MIT Lisence",
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "zcubes",
+        "aliases": ["ZCubes", "zcubes"],
+        "extensions": [".z3", ".zc"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "zcubes",
+        "scopeName": "source.zcubes",
+        "path": "./syntaxes/zcubes.tmlanguage"
+      }
+    ]
+  }
+}

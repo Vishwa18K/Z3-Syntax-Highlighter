@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>ZCubes</string>
+  <key>scopeName</key>
+  <string>source.zcubes</string>
+  <key>fileTypes</key>
+  <array>
+    <string>z3</string>
+    <string>zc</string>
+  </array>
+
+  <key>patterns</key>
+  <array>
+    <dict>
+      <key>include</key>
+      <string>#z3-keyword-print</string>
+    </dict>
+    <dict>
+      <key>include</key>
+      <string>#z3-operator</string>
+    </dict>
+    <dict>
+      <key>include</key>
+      <string>#z3-bitwise-operators</string>
+    </dict>
+    <dict>
+      <key>include</key>
+      <string>#z3-hash-suffix-operator</string>
+    </dict>
+
+    <dict>
+      <key>include</key>
+      <string>#z3-function-magicsquare</string>
+    </dict>
+
+    <dict>
+      <key>include</key>
+      <string>#z3-variable-assignment</string>
+    </dict>
+
+    <dict>
+      <key>include</key>
+      <string>#strings</string>
+    </dict>
+
+    <dict>
+      <key>include</key>
+      <string>#PLACEHOLDER1</string>
+    </dict>
+    <dict>
+      <key>include</key>
+      <string>#PLACEHOLDER2</string>
+    </dict>
+    <dict>
+      <key>include</key>
+      <string>#shebang</string>
+    </dict>
+
+    <dict><key>include</key><string>#z3-arithmetic-operators</string></dict>
+    <dict><key>include</key><string>#z3-array-function-operator</string></dict>
+    <dict><key>include</key><string>#z3-series-creation</string></dict>
+    <dict><key>include</key><string>#z3-series-qualifier</string></dict>
+    <dict><key>include</key><string>#z3-set-brackets</string></dict>
+    <dict><key>include</key><string>#z3-member-function</string></dict>
+    <dict><key>include</key><string>#z3-dot-application</string></dict>
+    <dict><key>include</key><string>#z3-conditionals</string></dict>
+    <dict><key>include</key><string>#z3-keyword-if</string></dict>
+    <dict><key>include</key><string>#z3-keyword-switch</string></dict>
+    <dict><key>include</key><string>#z3-keyword-do-unless</string></dict>
+    <dict><key>include</key><string>#z3-punct-return</string></dict>
+    <dict><key>include</key><string>#z3-conditional-qualifier</string></dict>
+    <dict><key>include</key><string>#z3-goto</string></dict>
+    <dict><key>include</key><string>#z3-keyword-to-by</string></dict>
+    <dict><key>include</key><string>#z3-function-F-prefix</string></dict>
+    <dict><key>include</key><string>#z3-operator-logical-symbols</string></dict>
+    <dict>
+      <key>include</key>
+      <string>#z3-operator-logical-and-symbol</string>
+    </dict>
+
+    <dict>
+      <key>begin</key>
+      <string>&lt;script&gt;</string>
+      <key>end</key>
+      <string>&lt;/script&gt;</string>
+      <key>name</key>
+      <string>meta.embedded.block.js.zcubes</string>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>include</key>
+          <string>source.js</string>
+        </dict>
+      </array>
+    </dict>
+  </array>
+
+  <key>repository</key>
+  <dict>
+    <key>z3-keyword-print</key>
+    <dict>
+      <key>match</key>
+      <string>\b(PRINT|SUM|⋰)\b</string>
+      <key>name</key>
+      <string>keyword.control.zcubes</string>
+    </dict>
+
+  <key>z3-arithmetic-operators</key>
+  <dict>
+    <key>match</key>
+    <string>\+|\-|\*|\/|\^|%</string>
+    <key>name</key>
+    <string>keyword.operator.arithmetic.zcubes</string>
+  </dict>
+
+  <key>z3-array-function-operator</key>
+  <dict>
+    <key>match</key>
+    <string>\|\|</string>
+    <key>name</key>
+    <string>support.function.array.creation.zcubes</string>
+  </dict>
+
+  <key>z3-series-creation</key>
+  <dict>
+    <key>match</key>
+    <string>\.\.\.|\.\.</string>
+    <key>name</key>
+    <string>support.function.series.creation.zcubes</string>
+  </dict>
+
+  <key>z3-series-qualifier</key>
+  <dict>
+    <key>match</key>
+    <string>#(?=[a-zA-Z])</string>
+    <key>name</key>
+    <string>keyword.operator.series.qualifier.prefix.zcubes</string>
+  </dict>
+
+  <key>z3-set-brackets</key>
+  <dict>
+    <key>match</key>
+    <string>\[|\]</string>
+    <key>name</key>
+    <string>punctuation.definition.set.zcubes</string>
+  </dict>
+
+  <key>z3-dot-application</key>
+  <dict>
+    <key>match</key>
+    <string>\.\$(\$|\$\$|\$_)?\s*\(</string>
+    <key>name</key>
+    <string>meta.function.application.dotstyle.zcubes</string>
+  </dict>
+  
+  <key>z3-conditionals</key>
+  <dict>
+    <key>match</key>
+    <string>:::?+</string>
+    <key>name</key>
+    <string>keyword.control.flow.zcubes</string>
+  </dict>
+
+  <key>z3-keyword-if</key>
+  <dict>
+    <key>match</key>
+    <string>\b(if|since|because)\b</string>
+    <key>name</key>
+    <string>keyword.control.zcubes</string>
+  </dict>
+
+  <key>z3-keyword-switch</key>
+  <dict>
+      <key>match</key>
+      <string>\bswitch\b</string>
+      <key>name</key>
+      <string>keyword.control.zcubes</string>
+  </dict>
+
+
+  <key>z3-operator-logical-and-symbol</key>
+  <dict>
+    <key>match</key>
+    <string>&amp;&amp;</string>
+    <key>name</key>
+    <string>keyword.operator.logical.and.zcubes</string>
+  </dict>
+
+
+  <key>z3-keyword-do-unless</key>
+  <dict>
+    <key>match</key>
+    <string>\bdo\s+unless\b</string>
+    <key>name</key>
+    <string>keyword.control.zcubes</string>
+  </dict>
+
+  <key>z3-punct-return</key>
+  <dict>
+    <key>match</key>
+    <string>\.:</string>
+    <key>name</key>
+    <string>keyword.control.zcubes</string>
+  </dict>
+
+  <key>z3-conditional-qualifier</key>
+  <dict>
+    <key>match</key>
+    <string>:::|::</string>
+    <key>name</key>
+    <string>keyword.control.zcubes</string>
+  </dict>
+
+  <key>z3-goto</key>
+  <dict>
+    <key>match</key>
+    <string>\bgoto\b</string>
+    <key>name</key>
+    <string>keyword.control.zcubes</string>
+  </dict>
+
+  <key>z3-operator-logical-symbols</key>
+  <dict>
+    <key>match</key>
+    <string>|\|\|</string>
+    <key>name</key>
+    <string>keyword.operator.logical.symbol.zcubes</string>
+  </dict>
+
+  <key>z3-keyword-to-by</key>
+  <dict>
+    <key>match</key>
+    <string>\b(to|by)\b</string>
+    <key>name</key>
+    <string>keyword.operator.range-step.zcubes</string>
+  </dict>
+
+  <key>z3-function-F-prefix</key>
+  <dict>
+    <key>match</key>
+    <string>\bF:([A-Za-z_][A-Za-z0-9_]*)\b</string>
+    <key>captures</key>
+    <dict>
+        <key>1</key>
+        <dict>
+        <key>name</key>
+        <string>entity.name.function.zcubes</string>
+      </dict>
+    </dict>
+</dict>
+
+
+
+  <key>z3-variable-assignment</key>
+  <dict>
+    <key>match</key>
+    <string>\b([a-zA-Z_][a-zA-Z0-9_]*)\b(?=\s*(=|&lt;&lt;&lt;|&lt;==|==&gt;|:=))</string>
+    <key>captures</key>
+    <dict>
+        <key>1</key>
+    <dict>
+          <key>name</key>
+          <string>variable.other.assignment.zcubes</string>
+    </dict>
+  </dict>
+</dict>
+
+    <key>z3-operator</key>
+    <dict>
+      <key>match</key>
+      <string>(@|~|↑|↓|⧓|⧒|⋈|√)</string>
+      <key>name</key>
+      <string>keyword.operator.z3</string>
+    </dict>
+
+
+    <key>z3-function-magicsquare</key>
+    <dict>
+      <key>match</key>
+      <string>\bMAGICSQUARE\b|\b(ROOTNTH|NTHROOT)\b</string>
+      <key>name</key>
+      <string>support.function.magicsquare.zcubes</string>
+    </dict>
+
+    <key>z3-bitwise-operators</key>
+    <dict>
+      <key>match</key>
+      <string>(&amp;)</string>
+      <key>name</key>
+      <string>keyword.operator.bitwise.z3</string>
+    </dict>
+
+    
+    
+
+    <key>z3-hash-suffix-operator</key>
+    <dict>
+      <key>match</key>
+      <string>(?=\w)#</string>
+      <key>name</key>
+      <string>keyword.operator.suffix.z3.hash</string>
+    </dict>
+
+    <key>strings</key>
+    <dict>
+      <key>begin</key>
+      <string>"</string>
+      <key>end</key>
+      <string>"</string>
+      <key>name</key>
+      <string>string.quoted.double.zcubes</string>
+    </dict>
+
+    <key>PLACEHOLDER1</key>
+    <dict>
+    </dict>
+
+    <key>PLACEHOLDER2</key>
+    <dict>
+    </dict>
+
+    <key>shebang</key>
+    <dict>
+    </dict>
+  </dict>
+
+  <key>uuid</key>
+  <string>6f7e4567-a1d2-4b7c-bfc3-5555cccc9999</string>
+</dict>
+</plist>
